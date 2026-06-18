@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Washington Materiais de Construção | Itaipu – Niterói</title>
+  <meta name="description" content="Material de construção com entrega rápida e preço abaixo do mercado em Itaipu e Região Oceânica de Niterói. Cimento, areia, blocos, ferragens e muito mais. Desde 2001."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── RESET ── */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:#333;background:#fff;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+    img{max-width:100%;display:block}
+    a{text-decoration:none}
+
+    /* ── TOKENS ── */
+    :root{
+      --g-dark:   #1b5e20;
+      --g-main:   #2e7d32;
+      --g-mid:    #388e3c;
+      --g-light:  #4caf50;
+      --g-soft:   #a5d6a7;
+      --cem-dark: #2c2c2c;
+      --cem-mid:  #4a4a4a;
+      --cem-light:#e8e6e1;
+      --cem-bg:   #f0efeb;
+      --white:    #ffffff;
+      --gray:     #666;
+      --dark:     #222;
+      --wa:       #25d366;
+      --wa-hov:   #128c7e;
+    }
+
+    /* ── GLOW ANIMATION ── */
+    @keyframes nameGlow{
+      0%,100%{text-shadow:0 0 18px rgba(165,214,167,.5),0 0 40px rgba(76,175,80,.3)}
+      50%    {text-shadow:0 0 32px rgba(165,214,167,.95),0 0 70px rgba(76,175,80,.65),0 0 110px rgba(46,125,50,.4)}
+    }
+    @keyframes pulse-wa{
+      0%  {box-shadow:0 0 0 0 rgba(37,211,102,.55)}
+      70% {box-shadow:0 0 0 16px rgba(37,211,102,0)}
+      100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+    }
+
+    /* ── TOP BAR ── */
+    .topbar{
+      background:var(--cem-dark);
+      color:rgba(255,255,255,.78);
+      font-size:12px;font-weight:600;
+      text-align:center;padding:9px 20px;letter-spacing:.4px
+    }
+    .topbar span{margin:0 10px}
+
+    /* ════════════════════════════════
+       DOBRA 1 — HERO
+    ════════════════════════════════ */
+    .hero{
+      background:linear-gradient(150deg,#1b5e20 0%,#2e7d32 55%,#1a4d1a 100%);
+      min-height:100dvh;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:80px 22px 70px;
+      position:relative;overflow:hidden
+    }
+    /* textura tijolo embaçada */
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg width='100' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1.2' fill='none'/%3E%3Crect x='51' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1.2' fill='none'/%3E%3Crect x='26' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1.2' fill='none'/%3E%3Crect x='-24' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
+      opacity:.055;filter:blur(1.5px);pointer-events:none
+    }
+    /* vinheta de profundidade */
+    .hero::after{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.35) 100%);
+      pointer-events:none
+    }
+
+    /* NOME WASHINGTON */
+    .brand-wrap{
+      display:flex;flex-direction:column;align-items:center;
+      margin-bottom:28px;position:relative;z-index:1
+    }
+    .brand-name{
+      font-family:'Montserrat',sans-serif;font-weight:900;
+      font-size:clamp(44px,11vw,88px);
+      color:#fff;letter-spacing:clamp(3px,1.5vw,10px);text-transform:uppercase;
+      line-height:1;
+      animation:nameGlow 3s ease-in-out infinite
+    }
+    .brand-sub{
+      font-family:'Montserrat',sans-serif;font-weight:600;
+      font-size:clamp(12px,2.5vw,18px);
+      color:var(--g-soft);letter-spacing:clamp(4px,1.5vw,8px);
+      text-transform:uppercase;margin-top:6px
+    }
+    .brand-divider{
+      width:60px;height:3px;
+      background:linear-gradient(90deg,transparent,var(--g-light),transparent);
+      margin:14px auto 0;border-radius:2px
+    }
+
+    .hero-tag{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+      color:var(--g-soft);font-size:12px;font-weight:700;
+      letter-spacing:1.5px;text-transform:uppercase;
+      padding:7px 18px;border-radius:30px;
+      margin-bottom:22px;position:relative;z-index:1
+    }
+    .hero h1{
+      font-size:clamp(28px,7vw,58px);font-weight:900;color:#fff;
+      line-height:1.13;margin-bottom:20px;max-width:800px;
+      position:relative;z-index:1
+    }
+    .hero h1 em{font-style:normal;color:var(--g-soft)}
+    .hero-sub{
+      font-size:clamp(15px,2.5vw,19px);color:rgba(255,255,255,.82);
+      max-width:560px;line-height:1.7;margin-bottom:38px;
+      position:relative;z-index:1
+    }
+
+    /* CTA */
+    .btn-wa{
+      display:inline-flex;align-items:center;gap:12px;
+      background:var(--wa);color:#fff;
+      font-family:'Montserrat',sans-serif;font-weight:800;
+      font-size:clamp(16px,3vw,20px);
+      padding:18px 38px;border-radius:50px;
+      box-shadow:0 6px 30px rgba(37,211,102,.45);
+      transition:transform .25s,box-shadow .25s,background .2s;
+      position:relative;z-index:1
+    }
+    .btn-wa:hover{background:var(--wa-hov);transform:translateY(-3px);box-shadow:0 12px 45px rgba(37,211,102,.5)}
+    .btn-wa svg{flex-shrink:0}
+
+    .trust-row{
+      margin-top:32px;display:flex;flex-wrap:wrap;
+      justify-content:center;gap:12px 22px;position:relative;z-index:1
+    }
+    .trust-item{color:rgba(255,255,255,.72);font-size:13px;display:flex;align-items:center;gap:6px}
+    .trust-item::before{content:'✓';color:var(--g-soft);font-weight:700;font-size:14px}
+
+    .hero-img-wrap{
+      width:100%;max-width:680px;margin-top:50px;
+      border-radius:18px;overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+      position:relative;z-index:1
+    }
+
+    /* ════════════════════════════════
+       SHARED SECTION STYLES
+    ════════════════════════════════ */
+    .section{padding:72px 22px}
+    .section--cem{background:var(--cem-bg)}
+    .section--dark{background:linear-gradient(160deg,var(--g-dark),#1a3d1a)}
+    .section--cement-dark{background:linear-gradient(160deg,var(--cem-dark),#1a1a1a)}
+
+    .sec-label{
+      text-align:center;font-family:'Montserrat',sans-serif;font-weight:700;
+      font-size:11px;letter-spacing:3px;text-transform:uppercase;
+      color:var(--g-main);margin-bottom:10px
+    }
+    .sec-label--light{color:var(--g-soft)}
+    .sec-label--gold{color:#c8a96e}
+    .sec-title{
+      text-align:center;font-size:clamp(24px,5vw,40px);font-weight:900;
+      color:var(--g-dark);line-height:1.2;margin-bottom:14px
+    }
+    .sec-title--light{color:#fff}
+    .sec-title--cem{color:var(--cem-dark)}
+    .sec-sub{
+      text-align:center;font-size:clamp(14px,2vw,17px);color:var(--gray);
+      max-width:540px;margin:0 auto 52px;line-height:1.7
+    }
+    .sec-sub--light{color:rgba(255,255,255,.72)}
+
+    /* ── PLACEHOLDER ── */
+    .placeholder{
+      display:flex;flex-direction:column;align-items:center;
+      justify-content:center;gap:10px;
+      border-radius:18px;padding:30px;text-align:center
+    }
+    .placeholder span{font-size:36px}
+    .placeholder p{font-weight:700}
+
+    /* ════════════════════════════════
+       DOBRA 2 — DIFERENCIAIS
+    ════════════════════════════════ */
+    .cards{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:22px;max-width:980px;margin:0 auto
+    }
+    .card{
+      background:#fff;border-radius:18px;padding:34px 26px 30px;
+      text-align:center;
+      box-shadow:0 4px 22px rgba(0,0,0,.07);
+      border-top:4px solid var(--g-main);
+      transition:transform .28s,box-shadow .28s
+    }
+    .card:hover{transform:translateY(-7px);box-shadow:0 14px 38px rgba(0,0,0,.11)}
+    .card-icon{font-size:44px;margin-bottom:16px;display:block}
+    .card h3{font-size:17px;font-weight:700;color:var(--cem-dark);margin-bottom:10px}
+    .card p{font-size:14px;color:var(--gray);line-height:1.65}
+
+    /* ════════════════════════════════
+       DOBRA 3 — PRODUTOS
+    ════════════════════════════════ */
+    /* brick texture on dark section */
+    .section--dark{position:relative}
+    .section--dark::before{
+      content:'';position:absolute;inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg width='100' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='51' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='26' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='-24' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+      opacity:.05;filter:blur(1px);pointer-events:none;z-index:0
+    }
+    .section--dark > *{position:relative;z-index:1}
+
+    .produtos-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));
+      gap:12px;max-width:900px;margin:0 auto
+    }
+    .prod-item{
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:14px;padding:22px 12px 18px;
+      text-align:center;color:#fff;
+      font-size:13px;font-weight:600;line-height:1.4;
+      transition:background .25s,transform .25s
+    }
+    .prod-item:hover{background:rgba(255,255,255,.15);transform:scale(1.04)}
+    .prod-icon{display:block;margin:0 auto 10px;width:38px;height:38px;opacity:.92}
+    .prod-tag{
+      display:inline-block;background:var(--g-light);color:var(--g-dark);
+      font-size:9px;font-weight:700;letter-spacing:.5px;
+      padding:2px 8px;border-radius:10px;margin-top:6px
+    }
+    .center-cta{text-align:center;margin-top:50px}
+
+    /* ════════════════════════════════
+       DOBRA 4 — HISTÓRIA
+    ════════════════════════════════ */
+    .historia-inner{
+      max-width:1020px;margin:0 auto;
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:64px;align-items:start
+    }
+    .hist-img-stack{display:flex;flex-direction:column;gap:16px}
+    .hist-img{
+      border-radius:16px;overflow:hidden;
+      box-shadow:0 12px 40px rgba(0,0,0,.12)
+    }
+    .hist-img img{width:100%;object-fit:cover;border-radius:16px;display:block;filter:contrast(1.12) brightness(1.06) saturate(1.1)}
+    .hist-img .placeholder{
+      background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+      border:2px dashed var(--g-main);color:var(--g-main);min-height:260px
+    }
+    .globo-badge{
+      display:flex;align-items:center;gap:12px;
+      background:linear-gradient(135deg,var(--cem-dark),#3a3a3a);
+      border-radius:12px;padding:14px 18px;
+      border-left:4px solid #c8a96e
+    }
+    .globo-dot{
+      width:42px;height:42px;border-radius:50%;
+      background:linear-gradient(135deg,#e53935,#c62828);
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+      font-family:'Montserrat',sans-serif;font-weight:900;
+      color:#fff;font-size:11px;letter-spacing:1px
+    }
+    .globo-text{color:#fff}
+    .globo-text strong{display:block;font-size:13px;font-weight:700;color:#c8a96e}
+    .globo-text span{font-size:12px;color:rgba(255,255,255,.65)}
+
+    .hist-content .sec-label,.hist-content .sec-title{text-align:left}
+    .hist-text{color:var(--gray);line-height:1.85;font-size:15px;margin-top:20px}
+    .hist-text p{margin-bottom:15px}
+    .hist-text strong{color:var(--cem-dark)}
+    .hist-text blockquote{
+      border-left:4px solid var(--g-light);padding:12px 18px;
+      background:var(--cem-bg);border-radius:0 10px 10px 0;
+      font-style:italic;color:var(--g-dark);font-weight:600;margin:20px 0
+    }
+    .stats-row{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px
+    }
+    .stat{text-align:center;background:var(--cem-bg);border-radius:14px;padding:18px 10px}
+    .stat .num{
+      font-family:'Montserrat',sans-serif;font-size:clamp(20px,3vw,28px);
+      font-weight:900;color:var(--g-main);display:block
+    }
+    .stat .lbl{font-size:11px;color:var(--gray);font-weight:600;letter-spacing:.4px}
+
+    /* ════════════════════════════════
+       DOBRA 5 — CTA FINAL
+    ════════════════════════════════ */
+    .cta-final{
+      background:linear-gradient(135deg,var(--g-main),var(--g-dark));
+      padding:90px 22px;text-align:center;position:relative;overflow:hidden
+    }
+    .cta-final::before{
+      content:'';position:absolute;inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg width='100' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='51' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='26' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='-24' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+      opacity:.05;filter:blur(1px);pointer-events:none
+    }
+    .cta-final>*{position:relative;z-index:1}
+    .cta-final h2{
+      font-size:clamp(26px,5.5vw,46px);font-weight:900;color:#fff;
+      line-height:1.18;margin-bottom:16px
+    }
+    .cta-final p{
+      color:rgba(255,255,255,.8);font-size:clamp(15px,2.5vw,18px);
+      max-width:480px;margin:0 auto 40px;line-height:1.65
+    }
+    .btn-wa--lg{font-size:clamp(17px,3vw,21px);padding:22px 46px}
+
+    /* ════════════════════════════════
+       LOCALIZAÇÃO + FOOTER
+    ════════════════════════════════ */
+    .localizacao{
+      background:var(--cem-dark);padding:70px 22px
+    }
+    .loc-inner{
+      max-width:1020px;margin:0 auto;
+      display:grid;grid-template-columns:1fr 1.4fr;
+      gap:48px;align-items:start
+    }
+    .loc-info .sec-title{text-align:left;font-size:clamp(22px,4vw,32px);color:#fff}
+    .loc-info .sec-label{text-align:left;color:#c8a96e}
+    .loc-details{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+    .loc-item{
+      display:flex;align-items:flex-start;gap:12px;
+      color:rgba(255,255,255,.8);font-size:14px;line-height:1.6
+    }
+    .loc-item-icon{
+      width:36px;height:36px;background:var(--g-main);border-radius:8px;
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;font-size:18px
+    }
+    .hours-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .hour-chip{
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+      border-radius:8px;padding:7px 14px;
+      font-size:12px;font-weight:600;color:rgba(255,255,255,.75)
+    }
+    .loc-map{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+    .loc-map iframe{width:100%;height:340px;border:0;display:block;border-radius:16px}
+
+    footer{
+      background:#111;color:rgba(255,255,255,.5);
+      padding:32px 22px;text-align:center
+    }
+    .footer-inner{max-width:600px;margin:0 auto}
+    .footer-logo{
+      font-family:'Montserrat',sans-serif;font-weight:800;
+      font-size:15px;color:var(--g-soft);margin-bottom:10px
+    }
+    footer p{font-size:13px;line-height:1.8}
+    .footer-sep{border:none;border-top:1px solid rgba(255,255,255,.07);margin:20px auto;max-width:380px}
+    .copy{font-size:11px;color:rgba(255,255,255,.25)}
+
+    /* ════════════════════════════════
+       FLOATING WA
+    ════════════════════════════════ */
+    .wa-float{
+      position:fixed;bottom:22px;right:22px;z-index:1000;
+      background:var(--wa);width:64px;height:64px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 6px 26px rgba(37,211,102,.55);
+      transition:transform .25s,box-shadow .25s;
+      animation:pulse-wa 2.2s infinite
+    }
+    .wa-float:hover{transform:scale(1.13);box-shadow:0 10px 40px rgba(37,211,102,.65)}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:760px){
+      .historia-inner,.loc-inner{grid-template-columns:1fr;gap:36px}
+      .hist-content .sec-title{font-size:26px;text-align:center}
+      .hist-content .sec-label{text-align:center}
+      .loc-info .sec-title,.loc-info .sec-label{text-align:center}
+      .loc-details{align-items:center}
+      .loc-map iframe{height:260px}
+    }
+    @media(max-width:480px){
+      .topbar span{display:block;margin:2px 0}
+      .btn-wa{padding:16px 24px}
+      .wa-float{width:56px;height:56px;bottom:16px;right:16px}
+      .brand-name{letter-spacing:3px}
+    }
+
+    /* ════════════════════════════════
+       HERO IMAGES (montagem + fachada)
+    ════════════════════════════════ */
+    .hero-images{
+      width:100%;max-width:900px;margin-top:50px;
+      display:grid;grid-template-columns:1.6fr 1fr;gap:12px;
+      position:relative;z-index:1
+    }
+    .hero-images .hi-main{
+      border-radius:16px;overflow:hidden;
+      box-shadow:0 16px 50px rgba(0,0,0,.4);
+      aspect-ratio:16/10;
+    }
+    .hero-images .hi-side{
+      border-radius:16px;overflow:hidden;
+      box-shadow:0 16px 50px rgba(0,0,0,.4);
+      aspect-ratio:9/10;
+    }
+    .hero-images img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-images .img-ph{
+      width:100%;height:100%;min-height:180px;
+      background:rgba(255,255,255,.07);
+      border:2px dashed rgba(255,255,255,.22);
+      display:flex;flex-direction:column;align-items:center;
+      justify-content:center;gap:8px;
+      color:rgba(255,255,255,.45);font-size:12px;text-align:center;padding:16px
+    }
+    .hero-images .img-ph span{font-size:30px}
+    @media(max-width:600px){
+      .hero-images{grid-template-columns:1fr}
+      .hero-images .hi-side{display:none}
+    }
+
+    /* ════════════════════════════════
+       GALERIA / CARROSSEL
+    ════════════════════════════════ */
+    .galeria{background:var(--cem-dark);padding:72px 22px;position:relative;overflow:hidden}
+    .galeria::before{
+      content:'';position:absolute;inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg width='100' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='51' y='1' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='26' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3Crect x='-24' y='26' width='48' height='23' rx='2' stroke='white' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+      opacity:.04;filter:blur(1px);pointer-events:none
+    }
+    .galeria>*{position:relative;z-index:1}
+    .car-wrap{
+      position:relative;max-width:1000px;margin:0 auto;
+      overflow:hidden;border-radius:16px
+    }
+    .car-track{
+      display:flex;
+      transition:transform .5s cubic-bezier(.4,0,.2,1);
+      will-change:transform
+    }
+    .car-slide{
+      flex:0 0 calc(100%/3);padding:0 7px;
+    }
+    .car-slide img,.car-slide .car-ph{
+      width:100%;aspect-ratio:4/3;
+      object-fit:cover;border-radius:12px;display:block;
+      box-shadow:0 4px 18px rgba(0,0,0,.3)
+    }
+    .car-ph{
+      background:rgba(255,255,255,.06);
+      border:2px dashed rgba(255,255,255,.18);
+      display:flex;flex-direction:column;align-items:center;
+      justify-content:center;gap:8px;
+      color:rgba(255,255,255,.4);font-size:12px;text-align:center;padding:20px
+    }
+    .car-ph span{font-size:32px}
+    .car-btn{
+      position:absolute;top:50%;transform:translateY(-50%);
+      background:rgba(255,255,255,.92);border:none;
+      width:44px;height:44px;border-radius:50%;
+      font-size:22px;line-height:1;cursor:pointer;
+      box-shadow:0 2px 14px rgba(0,0,0,.2);z-index:2;
+      display:flex;align-items:center;justify-content:center;
+      transition:background .2s,transform .2s;font-weight:700;color:#333
+    }
+    .car-btn:hover{background:#fff;transform:translateY(-50%) scale(1.08)}
+    .car-prev{left:6px}
+    .car-next{right:6px}
+    .car-dots{
+      display:flex;justify-content:center;gap:8px;margin-top:20px
+    }
+    .car-dot{
+      width:8px;height:8px;border-radius:50%;
+      background:rgba(255,255,255,.3);cursor:pointer;
+      transition:background .2s,transform .2s
+    }
+    .car-dot.active{background:var(--g-light);transform:scale(1.35)}
+    .car-caption{
+      text-align:center;margin-top:10px;
+      font-size:12px;color:rgba(255,255,255,.45);
+      letter-spacing:.5px;font-weight:600;text-transform:uppercase
+    }
+    @media(max-width:700px){
+      .car-slide{flex:0 0 85%}
+    }
+    @media(min-width:701px) and (max-width:1000px){
+      .car-slide{flex:0 0 50%}
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>📍 Itaipu, Niterói – RJ</span>
+  <span>|</span>
+  <span>🕐 Seg–Sex: 08h às 18h &nbsp;|&nbsp; Sáb: até 12h</span>
+</div>
+
+<!-- ══════════════════════════════════
+     DOBRA 1 — HERO
+══════════════════════════════════ -->
+<section class="hero">
+
+  <!-- NOME COM GLOW -->
+  <div class="brand-wrap">
+    <span class="brand-name">Washington</span>
+    <span class="brand-sub">Materiais de Construção</span>
+    <div class="brand-divider"></div>
+  </div>
+
+  <div class="hero-tag">⭐ Referência em Itaipu desde 2001</div>
+
+  <h1>
+    Material de Construção<br>
+    com <em>Entrega Rápida</em><br>
+    e <em>Preço Justo</em>
+  </h1>
+
+  <p class="hero-sub">
+    Enquanto outros esperam juntar carga, a gente entrega.<br>
+    Cimento, areia, blocos, ferragens e muito mais —<br>
+    direto no seu canteiro em Itaipu e toda a Região Oceânica.
+  </p>
+  <p class="hero-delivery-note" style="position:relative;z-index:1;margin-top:-24px;margin-bottom:32px;font-size:clamp(13px,2vw,15px);color:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;gap:7px;">
+    <span style="background:var(--g-light);color:var(--g-dark);font-weight:800;font-size:11px;padding:3px 10px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;">✓ Entrega no mesmo dia</span>
+    na grande maioria dos pedidos confirmados
+  </p>
+
+  <a href="https://wa.me/5521964720367?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais"
+     class="btn-wa" target="_blank" rel="noopener">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.532 5.856L.057 23.214a.75.75 0 00.93.93l5.358-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.951 9.951 0 01-5.077-1.391l-.364-.214-3.78 1.04 1.04-3.781-.214-.364A9.951 9.951 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    Falar com Washington no WhatsApp
+  </a>
+
+  <div class="trust-row">
+    <span class="trust-item">Entrega no mesmo dia</span>
+    <span class="trust-item">Preço abaixo do mercado</span>
+    <span class="trust-item">+20 anos de experiência</span>
+    <span class="trust-item">Atendimento direto com o dono</span>
+  </div>
+
+  <!-- IMAGENS: montagem (principal) + fachada (lateral) -->
+  <div class="hero-images">
+    <div class="hi-main">
+      <img src="Fotos Pai/montagem.jpeg" alt="Washington Materiais – Estoque completo">
+    </div>
+    <div class="hi-side">
+      <img src="Fotos Pai/fachada.jpeg" alt="Fachada Washington Materiais – Itaipu">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DOBRA 2 — DIFERENCIAIS
+══════════════════════════════════ -->
+<section class="section section--cem">
+  <p class="sec-label">Por que escolher a Washington?</p>
+  <h2 class="sec-title">A loja que a Região Oceânica<br>confia há mais de 20 anos</h2>
+  <p class="sec-sub">Mais que materiais — um parceiro que entende de obra e entrega sem enrolação.</p>
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">⚡</span>
+      <h3>Entrega Rápida de Verdade</h3>
+      <p>A concorrência espera juntar carga. Nós saímos com o seu pedido logo que confirmado. Obra parada, nunca mais.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">💰</span>
+      <h3>Preço Abaixo do Mercado</h3>
+      <p>Compra direta + volume de anos. Você sente a economia desde o primeiro pedido, na ponta do lápis.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🤝</span>
+      <h3>Palavra que Vale</h3>
+      <p>Mais de 20 anos honrando compromissos em Itaipu. Aqui o que é combinado é cumprido — sem exceção.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">👷</span>
+      <h3>Fale Direto com o Dono</h3>
+      <p>Washington responde pessoalmente. Sem atendente, sem robô. Quem cuida do seu pedido é quem entende de obra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DOBRA 3 — PRODUTOS
+══════════════════════════════════ -->
+<section class="section section--dark">
+  <p class="sec-label sec-label--light">O que você encontra aqui</p>
+  <h2 class="sec-title sec-title--light">Tudo que sua obra precisa,<br>num único lugar</h2>
+  <p class="sec-sub sec-sub--light">Materiais de qualidade com disponibilidade imediata — do básico ao estrutural.</p>
+
+  <div class="produtos-grid">
+
+    <!-- Cimento -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7" y="5" width="24" height="28" rx="3" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <line x1="11" y1="15" x2="27" y2="15" stroke="white" stroke-width="1.5"/>
+        <line x1="11" y1="21" x2="27" y2="21" stroke="white" stroke-width="1.5"/>
+        <line x1="14" y1="5" x2="14" y2="33" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+      </svg>
+      Cimento
+    </div>
+
+    <!-- Areia -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="23" r="3.5"/>
+        <circle cx="19" cy="26" r="4.5"/>
+        <circle cx="28" cy="22" r="3"/>
+        <circle cx="14" cy="17" r="2.5"/>
+        <circle cx="23" cy="16" r="2"/>
+        <rect x="4" y="30" width="30" height="4" rx="2"/>
+      </svg>
+      Areia &amp; Areia Fina
+    </div>
+
+    <!-- Pedra -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 4 L28 7 L33 18 L24 31 L11 29 L5 18 Z" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <path d="M14 4 L18 12 L28 7" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        <path d="M18 12 L24 31" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+      </svg>
+      Pedra Brita
+    </div>
+
+    <!-- Tijolos -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="7" width="32" height="10" rx="1.5" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <rect x="3" y="21" width="32" height="10" rx="1.5" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <line x1="19" y1="7" x2="19" y2="17" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+        <line x1="13" y1="21" x2="13" y2="31" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+        <line x1="25" y1="21" x2="25" y2="31" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+      </svg>
+      Tijolos &amp; Blocos
+    </div>
+
+    <!-- Vergalhões -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="5" y1="33" x2="33" y2="5" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="12" y1="36" x2="38" y2="10" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="-2" y1="28" x2="26" y2="2" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      Vergalhões &amp; Colunas
+    </div>
+
+    <!-- Radier -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="30" height="30" rx="2" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.08)"/>
+        <line x1="4" y1="15" x2="34" y2="15" stroke="white" stroke-width="1.2"/>
+        <line x1="4" y1="24" x2="34" y2="24" stroke="white" stroke-width="1.2"/>
+        <line x1="15" y1="4" x2="15" y2="34" stroke="white" stroke-width="1.2"/>
+        <line x1="24" y1="4" x2="24" y2="34" stroke="white" stroke-width="1.2"/>
+      </svg>
+      Radier &amp; Ferragens
+    </div>
+
+    <!-- Pregos -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <rect x="13" y="4" width="12" height="8" rx="2"/>
+        <rect x="17" y="12" width="4" height="18" rx="1"/>
+        <path d="M17 30 L19 36 L21 30 Z"/>
+        <path d="M27 10 Q32 14 30 20 Q28 26 33 28" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      </svg>
+      Pregos &amp; Arames
+    </div>
+
+    <!-- Telhas -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 22 L19 5 L35 22 Z" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <line x1="3" y1="22" x2="35" y2="22" stroke="white" stroke-width="1.5"/>
+        <line x1="3" y1="26" x2="35" y2="26" stroke="white" stroke-width="1.5"/>
+        <line x1="3" y1="30" x2="35" y2="30" stroke="white" stroke-width="1.5"/>
+        <line x1="8" y1="22" x2="8" y2="34" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        <line x1="19" y1="22" x2="19" y2="34" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+        <line x1="30" y1="22" x2="30" y2="34" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+      </svg>
+      Telhas Fibrocimento e PVC
+    </div>
+
+    <!-- Tubos -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="19" cy="10" rx="13" ry="6" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <line x1="6" y1="10" x2="6" y2="28" stroke="white" stroke-width="1.8"/>
+        <line x1="32" y1="10" x2="32" y2="28" stroke="white" stroke-width="1.8"/>
+        <ellipse cx="19" cy="28" rx="13" ry="6" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.08)"/>
+        <ellipse cx="19" cy="28" rx="6" ry="3" stroke="rgba(255,255,255,.4)" stroke-width="1" fill="none"/>
+      </svg>
+      Tubos &amp; Conduítes
+    </div>
+
+    <!-- Fios -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 30 Q10 10 19 19 Q28 28 32 8" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle cx="6" cy="30" r="2.5" fill="white"/>
+        <circle cx="32" cy="8" r="2.5" fill="white"/>
+        <path d="M16 14 L19 8 L22 14" fill="white"/>
+      </svg>
+      Fios Elétricos
+    </div>
+
+    <!-- Argamassa -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 12 L6 32 L32 32 L29 12 Z" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.12)"/>
+        <line x1="9" y1="12" x2="29" y2="12" stroke="white" stroke-width="2"/>
+        <line x1="16" y1="5" x2="22" y2="5" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="19" y1="5" x2="19" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="12" y1="22" x2="26" y2="22" stroke="rgba(255,255,255,.4)" stroke-width="1.2"/>
+      </svg>
+      Argamassa &amp; Cal
+    </div>
+
+    <!-- Mais -->
+    <div class="prod-item">
+      <svg class="prod-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="12" width="30" height="22" rx="2" stroke="white" stroke-width="1.8" fill="rgba(255,255,255,.1)"/>
+        <path d="M12 12 V8 Q12 4 19 4 Q26 4 26 8 V12" stroke="white" stroke-width="1.8" fill="none"/>
+        <line x1="19" y1="19" x2="19" y2="29" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="14" y1="24" x2="24" y2="24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      + Materiais Gerais
+    </div>
+
+  </div>
+
+  <div class="center-cta">
+    <a href="https://wa.me/5521964720367?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais"
+       class="btn-wa" target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.532 5.856L.057 23.214a.75.75 0 00.93.93l5.358-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.951 9.951 0 01-5.077-1.391l-.364-.214-3.78 1.04 1.04-3.781-.214-.364A9.951 9.951 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+      Solicitar Orçamento pelo WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DOBRA 4 — HISTÓRIA DO WASHINGTON
+══════════════════════════════════ -->
+<section class="section" style="background:#fff;">
+  <div class="historia-inner">
+
+    <!-- Coluna esquerda: fotos -->
+    <div class="hist-img-stack">
+
+      <!-- Foto pessoal Washington -->
+      <div class="hist-img">
+        <img src="Fotos Pai/washington-perfil.jpeg" alt="Washington – proprietário">
+      </div>
+
+      <!-- Foto entrevista Globo -->
+      <div class="hist-img">
+        <img src="Fotos Pai/washington-globo.jpeg" alt="Washington entrevistado pela Globo">
+      </div>
+
+      <!-- Badge Globo -->
+      <div class="globo-badge">
+        <div class="globo-dot">GLOBO</div>
+        <div class="globo-text">
+          <strong>Como visto na TV Globo</strong>
+          <span>Washington foi entrevistado pela Globo sobre o mercado de materiais na Região Oceânica</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Coluna direita: texto -->
+    <div class="hist-content">
+      <p class="sec-label">Quem está por trás disso tudo</p>
+      <h2 class="sec-title" style="text-align:left;font-size:clamp(22px,4vw,34px);">
+        Uma história de coragem,<br>trabalho e confiança
+      </h2>
+
+      <div class="hist-text">
+        <p>
+          Washington cresceu dentro do comércio — filho de comerciante do mesmo ramo, aprendeu desde criança que construir um bom negócio começa com <strong>palavra firme e cliente satisfeito.</strong>
+        </p>
+        <p>
+          No início dos anos 2000, quando a Região Oceânica de Niterói começava a despertar, ele enxergou o que poucos viam: uma comunidade em crescimento, cheia de famílias erguendo seus sonhos, mas carente de um fornecedor de confiança — com estoque real, preço honesto e entrega de verdade.
+        </p>
+        <p>
+          Tomou então uma das decisões mais difíceis da vida. Deixou <strong>Campos dos Goytacazes</strong>, sua esposa e seu filho, e partiu sozinho para Itaipu com uma mala e um propósito claro.
+        </p>
+
+        <blockquote>
+          "Não vim para ser mais um. Vim para ser o atendimento que essa região merecia."
+        </blockquote>
+
+        <p>
+          Foram anos de luta silenciosa: aprendendo cada rua, cada cliente, cada necessidade de obra. Entregando quando os concorrentes esperavam completar o caminhão. Cobrando menos quando o mercado enchia o bolso.
+        </p>
+        <p>
+          Mais de duas décadas depois, <strong>Washington é referência reconhecida em Itaipu e em toda a Região Oceânica.</strong> Indicado por construtores, pedreiros e famílias que confiam no seu nome — e pela própria Globo, que veio até ele para falar sobre o setor.
+        </p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="num">+20</span>
+          <span class="lbl">Anos no mercado</span>
+        </div>
+        <div class="stat">
+          <span class="num">Toda</span>
+          <span class="lbl">Região Oceânica atendida</span>
+        </div>
+        <div class="stat">
+          <span class="num">Rápido</span>
+          <span class="lbl">Sempre na entrega</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     GALERIA — CARROSSEL DE PRODUTOS
+══════════════════════════════════ -->
+<section class="galeria">
+  <p class="sec-label sec-label--light">Estoque real, entrega imediata</p>
+  <h2 class="sec-title sec-title--light">Veja o que temos para você</h2>
+  <p class="sec-sub sec-sub--light" style="margin-bottom:36px;">Fotos reais do nosso estoque. Disponível agora, saindo hoje.</p>
+
+  <div class="car-wrap">
+    <div class="car-track" id="carTrack">
+
+      <div class="car-slide">
+        <img src="Fotos Pai/tijolos.jpeg" alt="Tijolos vermelhos – Washington Materiais">
+        <p class="car-caption">Tijolos &amp; Blocos</p>
+      </div>
+
+      <div class="car-slide">
+        <img src="Fotos Pai/cimento.jpeg" alt="Cimento Mauá em paletes – Washington Materiais">
+        <p class="car-caption">Cimento &amp; Argamassa</p>
+      </div>
+
+      <div class="car-slide">
+        <img src="Fotos Pai/vergalhoes.jpeg" alt="Vergalhões e ferragens – Washington Materiais">
+        <p class="car-caption">Ferragens &amp; Vergalhões</p>
+      </div>
+
+      <div class="car-slide">
+        <img src="Fotos Pai/madeira-telhas.jpeg" alt="Madeira e telhas – Washington Materiais">
+        <p class="car-caption">Telhas &amp; Madeira</p>
+      </div>
+
+      <div class="car-slide">
+        <img src="Fotos Pai/areia-pedra.jpeg" alt="Areia e pedra brita – Washington Materiais">
+        <p class="car-caption">Areia &amp; Pedra Brita</p>
+      </div>
+
+      <div class="car-slide">
+        <img src="Fotos Pai/galpao.jpeg" alt="Galpão com cimento Votoran – Washington Materiais">
+        <p class="car-caption">Nosso Estoque</p>
+      </div>
+
+    </div>
+
+    <button class="car-btn car-prev" id="carPrev" aria-label="Anterior">&#8249;</button>
+    <button class="car-btn car-next" id="carNext" aria-label="Próximo">&#8250;</button>
+  </div>
+
+  <div class="car-dots" id="carDots"></div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <a href="https://wa.me/5521964720367?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais"
+       class="btn-wa" target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.532 5.856L.057 23.214a.75.75 0 00.93.93l5.358-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.951 9.951 0 01-5.077-1.391l-.364-.214-3.78 1.04 1.04-3.781-.214-.364A9.951 9.951 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+      Tenho interesse — falar com Washington
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DOBRA 5 — CTA FINAL
+══════════════════════════════════ -->
+<section class="cta-final">
+  <h2>Sua obra não pode esperar.<br>E a gente sabe disso.</h2>
+  <p>Fale agora com o Washington e receba seu orçamento em minutos.<br>Sem enrolação, sem fila, sem espera.</p>
+  <a href="https://wa.me/5521964720367?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais"
+     class="btn-wa btn-wa--lg" target="_blank" rel="noopener">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.532 5.856L.057 23.214a.75.75 0 00.93.93l5.358-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.951 9.951 0 01-5.077-1.391l-.364-.214-3.78 1.04 1.04-3.781-.214-.364A9.951 9.951 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    Quero Falar com o Washington Agora
+  </a>
+</section>
+
+<!-- ══════════════════════════════════
+     LOCALIZAÇÃO + MAPA
+══════════════════════════════════ -->
+<section class="localizacao">
+  <div class="loc-inner">
+    <div class="loc-info">
+      <p class="sec-label sec-label--gold">Onde nos encontrar</p>
+      <h2 class="sec-title sec-title--light">Venha nos visitar<br>ou fale pelo WhatsApp</h2>
+      <div class="loc-details">
+        <div class="loc-item">
+          <div class="loc-item-icon">📍</div>
+          <div>
+            <strong style="color:#fff;display:block;margin-bottom:4px;">Endereço</strong>
+            Av. Ewerton da Costa Xavier (Antiga Av. Central), Qd. 08, Lt. 14 — Itaipu, Niterói/RJ
+            <div style="color:rgba(255,255,255,.45);font-size:12px;margin-top:4px;">
+              Referência: Final da Av. Central, após a Ultragas — lado direito
+            </div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-item-icon">🕐</div>
+          <div>
+            <strong style="color:#fff;display:block;margin-bottom:8px;">Horário de funcionamento</strong>
+            <div class="hours-chips">
+              <div class="hour-chip">Seg–Sex: 08h às 18h</div>
+              <div class="hour-chip">Sábado: 08h às 12h</div>
+            </div>
+          </div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-item-icon" style="background:var(--wa);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.532 5.856L.057 23.214a.75.75 0 00.93.93l5.358-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.951 9.951 0 01-5.077-1.391l-.364-.214-3.78 1.04 1.04-3.781-.214-.364A9.951 9.951 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+          </div>
+          <div>
+            <strong style="color:#fff;display:block;margin-bottom:4px;">WhatsApp</strong>
+            <a href="https://wa.me/5521964720367?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais"
+               style="color:var(--wa);font-weight:700;" target="_blank">(21) 96472-0367</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAPA -->
+    <div class="loc-map">
+      <iframe
+        src="https://maps.google.com/maps?q=-22.9264023,-43.0103622&z=17&output=embed&hl=pt-BR"
+        width="100%" height="340"
+        style="border:0;border-radius:16px;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Washington Materiais de Construção">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Washington Materiais de Construção</div>
+    <p>Itaipu, Niterói/RJ · Desde 2001</p>
+  </div>
+  <hr class="footer-sep"/>
+  <p class="copy">© 2026 Washington Materiais de Construção · Todos os direitos reservados</p>
+</footer>
+
+<!-- FLOATING WhatsApp -->
+<a href="https://wa.me/5521964720367?text=Vim%20do%20site%20e%20gostaria%20de%20saber%20mais"
+   class="wa-float" target="_blank" rel="noopener"
+   title="Falar com Washington pelo WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.532 5.856L.057 23.214a.75.75 0 00.93.93l5.358-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.951 9.951 0 01-5.077-1.391l-.364-.214-3.78 1.04 1.04-3.781-.214-.364A9.951 9.951 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
+
+<script>
+(function(){
+  const track  = document.getElementById('carTrack');
+  const dotsEl = document.getElementById('carDots');
+  const prevBtn= document.getElementById('carPrev');
+  const nextBtn= document.getElementById('carNext');
+  if(!track) return;
+
+  const slides = track.querySelectorAll('.car-slide');
+  const total  = slides.length;
+  let current  = 0;
+  let perView  = getPerView();
+  let maxIdx   = Math.max(0, total - perView);
+  let ap;
+
+  function getPerView(){
+    return window.innerWidth <= 700 ? 1 : window.innerWidth <= 1000 ? 2 : 3;
+  }
+
+  function buildDots(){
+    dotsEl.innerHTML = '';
+    for(let i = 0; i <= Math.max(0, total - getPerView()); i++){
+      const d = document.createElement('div');
+      d.className = 'car-dot' + (i===0?' active':'');
+      d.addEventListener('click', ()=>goTo(i));
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function goTo(idx){
+    perView = getPerView();
+    maxIdx  = Math.max(0, total - perView);
+    current = Math.max(0, Math.min(idx, maxIdx));
+    const pct = (current / total) * 100;
+    track.style.transform = 'translateX(-'+pct+'%)';
+    dotsEl.querySelectorAll('.car-dot').forEach((d,i)=>{
+      d.classList.toggle('active', i===current);
+    });
+  }
+
+  prevBtn.addEventListener('click', ()=>goTo(current-1));
+  nextBtn.addEventListener('click', ()=>goTo(current+1));
+
+  function startAP(){
+    ap = setInterval(()=>{
+      goTo(current >= Math.max(0, total-getPerView()) ? 0 : current+1);
+    }, 4200);
+  }
+  const wrapper = track.closest('.car-wrap');
+  wrapper.addEventListener('mouseenter', ()=>clearInterval(ap));
+  wrapper.addEventListener('mouseleave', ()=>startAP());
+
+  let ts = 0;
+  track.addEventListener('touchstart', e=>{ ts = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend',   e=>{
+    const diff = ts - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 40){ diff > 0 ? goTo(current+1) : goTo(current-1); }
+  });
+
+  window.addEventListener('resize', ()=>{ buildDots(); goTo(0); });
+
+  buildDots();
+  goTo(0);
+  startAP();
+})();
+</script>
+</body>
+</html>
